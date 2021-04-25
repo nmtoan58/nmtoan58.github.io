@@ -77,18 +77,27 @@
                         </a>
                     </div>
                     <div class="header__search-search">
-                        <div class="header__search-search-input">
-                            <form action="" class="header__search-search-input-search-form hide">
+                        <div class="header__search-search-input show">
+                            <form autocomplete="off" action="" class="header__search-search-input-search-form hide ">
                                 <select class="header__search-search-input-search-select" name="" id="">
                                     <option value="1">All Categories</option>
                                     <option value="2">Baby & Child Care</option>
                                     <option value="3">Sexual Health</option>
                                     <option value="4">Cosmestics</option>
                                 </select>
-                                <input placeholder="Search for product..." class="header__search-search-input-search" type="text">
+                                <div class="header__search-search-input-search-wrap autocomplete">
+                                    <input id="myInput" placeholder="Search for product..." class="header__search-search-input-search" type="text">
+                                </div>
                                 <button class="header__search-search-input-icon-img">
                                     <img src="./img/search.png" alt="" class="header__search-search-input-incon-search">
                                 </button>
+                                <!-- <div class="search__suggest">
+                                    <ul class="search__suggest-list">
+                                        <li class="search__suggest-item">Nature's Bounty Biotin</li>
+                                        <li class="search__suggest-item">Best Colon Detox Formula</li>
+                                        <li class="search__suggest-item">Natural Factors Vitamin C</li>
+                                    </ul>
+                                </div> -->
                             </form>
                             
                             <!-- <span class="header__search-search-option">All Category
@@ -101,7 +110,7 @@
                             </div>
                             <div id="cart" onclick="getCart()" class="header__search-search-icon-text header__cart">
                                 <img src="./img/cart.png" alt="" class="header__search-search-icon-img">
-                                <span class="header__cart-count">1</span>
+                                <span class="header__cart-count">2</span>
                                 
                             </div>
                             <div class="header__search-search-icon-text hide-icon">
@@ -250,7 +259,17 @@
             </div>
         </div>
         <div class="slider">
-            <img class="slider__img" src="./img/banner.png" alt="">
+            <div class="slider__wrap-item">
+                <div class="slider__item slider--active">
+                    <img class="slider__img" src="./img/banner.png" alt="">
+                </div>
+                <div class="slider__item">
+                    <img class="slider__img" src="./img/slider2.jpeg" alt="">
+                </div>
+                <div class="slider__item">
+                    <img class="slider__img" src="./img/slider3.jpeg" alt="">
+                </div>
+            </div>
             <div class="slider__btn-next-prev">
                 <div class="slider__btn-prev"><i class="fas fa-chevron-left"></i></div>
                 <div class="slider__btn-next"><i class="fas fa-chevron-right"></i></div>             
@@ -319,21 +338,21 @@
                                 <div class="banner__hot-deal-time">
                                     <ul class="banner__hot-deal-time-list">
                                         <li class="banner__hot-deal-time-item">
-                                            <span class="banner__hot-deal-time-time">230</span>
+                                            <span id="day" class="banner__hot-deal-time-time">230</span>
                                             <span class="banner__hot-deal-time-text">DAYS</span>
                                         </li>
                                         <li class="banner__hot-deal-time-item">
-                                            <span class="banner__hot-deal-time-time">24</span>
+                                            <span id="hours" class="banner__hot-deal-time-time">24</span>
                                             <span class="banner__hot-deal-time-text">HRS</span>
                                         </span>
                                         </li>
                                         <li class="banner__hot-deal-time-item">
-                                            <span class="banner__hot-deal-time-time">40</span>
+                                            <span id="minute" class="banner__hot-deal-time-time">40</span>
                                             <span class="banner__hot-deal-time-text">MINS</span>
                                         </span>
                                         </li>
                                         <li class="banner__hot-deal-time-item">
-                                            <span class="banner__hot-deal-time-time">60</span>
+                                            <span id="second" class="banner__hot-deal-time-time">60</span>
                                             <span class="banner__hot-deal-time-text">SECS</span>
                                         </span>
                                         </li>
@@ -848,6 +867,8 @@
     </div>
     <script src="./main.js"></script>
     <script src="./loading.js"></script>
+    <script src="./slider.js"></script>
+    <script src="./search.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="./slick/slick-1.8.1/slick/slick.js"></script>
     <script src="./slick.js"></script>
