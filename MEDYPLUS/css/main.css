@@ -1214,8 +1214,13 @@
     z-index: 100;
 }
 
+.loading-img {
+    width: 600px;
+    height: auto;
+}
+
 .disppear {
-    animation: vanish 2s forwards;
+    animation: vanish 1s forwards;
 }
 
 
