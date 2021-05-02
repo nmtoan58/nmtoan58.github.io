@@ -1,21 +1,50 @@
+/*Get-setting*/
 var setting = document.getElementById('setting');
 var cart = document.getElementById('cart-list');
+var iconCart = document.getElementById('cart');
+var iconSetting =  document.getElementById('icon-setting');
+var iconMenu = document.getElementById('menu-icon');
+var menu =  document.getElementById('menu-list');
 
-function getCart () {
-    cart.classList.toggle("hide-cart");
+
+/*Show setting*/
+function showSetting() {
+    document.onclick = function(e) {
+        if(e.target.id !== 'setting' && e.target.id !== 'icon-setting'){
+            setting.classList.remove('show');
+        }
+    }
+    
+    iconSetting.onclick = function() {
+        setting.classList.toggle('show');
+    }  
+}
+/*Show cart*/
+function showCart(){  
+    document.onclick = function(e) {
+        if(e.target.id !== 'cart' && e.target.id !== 'cart-list'){
+            cart.classList.remove('show-cart');
+        }
+    }
+    
+    iconCart.onclick = function() {
+        cart.classList.toggle('show-cart');
+    }
 }
 
-function getSetting() {
-    setting.classList.toggle("hide-setting");
+/*Show-menu*/
+function showMenu(){  
+    document.onclick = function(e) {
+        if(e.target.id !== 'menu-icon' && e.target.id !== 'menu-list'){
+            menu.classList.remove('show-menu');
+        }
+    }
+    
+    iconMenu.onclick = function() {
+        menu.classList.toggle('show-menu');
+    }
 }
 
-// if(cart.style.display = 'block'){
-//     setting.style.display = 'none';
-// }
-
-// else if(setting.style.display = ){
-//     setting.style.display = 
-// }
 
 function countdown() {
     let now = new Date();

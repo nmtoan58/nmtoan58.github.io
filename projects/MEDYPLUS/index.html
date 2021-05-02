@@ -7,6 +7,8 @@
     <title>MEDY PLUS</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/root.css">
     <link rel="stylesheet" href="./css/responsive.css">
@@ -14,6 +16,11 @@
     <link rel="stylesheet" href="./slick/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./slick/slick-1.8.1/slick/slick-theme.css">
     <link rel="icon" href="./img/Logo-web.png">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css"> -->
+    <link rel="stylesheet" href="./font/themify-icons/themify-icons.css">
+    <!-- <link rel="stylesheet" href="./font/icomoon-ultimate-webfont-master/icomoon-ultimate-webfont.css"> -->
+
 </head>
 <body>
     <div class="wraper">
@@ -105,11 +112,11 @@
                             </span> -->
                         </div>
                         <div class="header__search-search-icon">
-                            <div onclick="getSetting()" class="header__search-search-icon-text">
-                                <img src="./img/setting-header-icon.png" alt="" class="header__search-search-icon-img">
+                            <div class="header__search-search-icon-text">
+                                <img id="icon-setting" onclick="showSetting()" src="./img/setting-header-icon.png" alt="" class="header__search-search-icon-img">
                             </div>
-                            <div id="cart" onclick="getCart()" class="header__search-search-icon-text header__cart">
-                                <img src="./img/cart.png" alt="" class="header__search-search-icon-img">
+                            <div class="header__search-search-icon-text header__cart">
+                                <img id="cart" onclick="showCart()" src="./img/cart.png" alt="" class="header__search-search-icon-img">
                                 <span class="header__cart-count">2</span>
                                 
                             </div>
@@ -181,9 +188,9 @@
         <div class="header__navbar">
             <div class="container">
                 <div class="header__navbar-bar">
-                    <input hidden type="checkbox" class="menu-categories-check" name="" id="menu-categories">
+                    <!-- <input hidden type="checkbox" class="menu-categories-check" name="" id="menu-categories"> -->
                     <label class="header__navbar-menu" for="menu-categories">
-                        <span class="header__navbar-menu-icon"><i class="fas fa-bars"></i></span>
+                        <img id="menu-icon" onclick="showMenu()" src="./img/menu.png" class="header__navbar-menu-icon"></img>
                         <span class="header__navbar-category">CATEGORIES</span>
                     </label>
                     <!-- <div class="header__navbar-menu">
@@ -212,7 +219,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="header__navbar-menu-categories">
+                    <div id="menu-list" class="header__navbar-menu-categories">
                         <ul class="header__navbar-menu-categories-list">
                             <li class="header__navbar-menu-categories-item">
                                 <span class="header__navbar-menu-categories-item-text">
@@ -410,18 +417,17 @@
                         </div>
                     </div>
                     <div class="product__products">
-                        <a href="#" class="product__products-item">
-                            <div class="product__products-item-img-wrap">
+                        <div class="product__products-item">
+                            <a href="#" class="product__products-item-img-wrap">
                                 <div class="product__overlay">
                                     <i class="far fa-eye"></i>
                                 </div>
                                 <img src="./img/products/1.png" alt="" class="product__products-item-img">
-                                
-                            </div>
-                            <div class="product__infor">
                                 <div class="product__products-item-name">
                                     <span class="product__products-item-name-text">Nature's Bounty Biotin</span>
                                 </div>
+                            </a>
+                            <div class="product__infor">
                                 <div class="product__products-item-brand">
                                     <span class="product__products-item-brand-text">10000 MCG</span>
                                 </div>
@@ -429,20 +435,19 @@
                                     <span class="product__products-item-cost-sub-text"></span>
                                     <span class="product__products-item-cost-main-text">$30.00</span>
                                 </div>
-                            </div>
-                            
-                        </a>
-                        <a href="#" class="product__products-item">
-                            <div class="product__products-item-img-wrap">
+                            </div>                         
+                        </div>
+                        <div class="product__products-item">
+                            <a href="#" class="product__products-item-img-wrap">
                                 <div class="product__overlay">
                                     <i class="far fa-eye"></i>
                                 </div>
                                 <img src="./img/products/2.png" alt="" class="product__products-item-img">
-                            </div>
-                            <div class="product__infor">
                                 <div class="product__products-item-name">
                                     <span class="product__products-item-name-text">Best Colon Detox Formula</span>
                                 </div>
+                            </a>
+                            <div class="product__infor">                               
                                 <div class="product__products-item-brand">
                                     <span class="product__products-item-brand-text">Advanced Colon</span>
                                 </div>
@@ -451,18 +456,19 @@
                                     <span class="product__products-item-cost-main-text">$30.00</span>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="product__products-item">
-                            <div class="product__products-item-img-wrap">
+                        </div>
+                        <div class="product__products-item">
+                            <a href="#" class="product__products-item-img-wrap">
                                 <div class="product__overlay">
                                     <i class="far fa-eye"></i>
                                 </div>
                                 <img src="./img/products/3.png" alt="" class="product__products-item-img">
-                            </div>
-                            <div class="product__infor">
                                 <div class="product__products-item-name">
                                     <span class="product__products-item-name-text">Natural Factors Vitamin C</span>
                                 </div>
+                            </a>
+                            <div class="product__infor">
+                                
                                 <div class="product__products-item-brand">
                                     <span class="product__products-item-brand-text">Blueberry Rasp</span>
                                 </div>
@@ -471,18 +477,18 @@
                                     <span class="product__products-item-cost-main-text">$30.00</span>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="product__products-item">
-                            <div class="product__products-item-img-wrap">
+                        </div>
+                        <div class="product__products-item">
+                            <a href="#" class="product__products-item-img-wrap">
                                 <div class="product__overlay">
                                     <i class="far fa-eye"></i>
                                 </div>
                                 <img src="./img/products/4.png" alt="" class="product__products-item-img">
-                            </div>
-                            <div class="product__infor">
                                 <div class="product__products-item-name">
                                     <span class="product__products-item-name-text">Jarrow Formulas</span>
                                 </div>
+                            </a>
+                            <div class="product__infor">                               
                                 <div class="product__products-item-brand">
                                     <span class="product__products-item-brand-text">Methylcobalamin</span>
                                 </div>
@@ -491,18 +497,19 @@
                                     <span class="product__products-item-cost-main-text">$30.00</span>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="product__products-item">
-                            <div class="product__products-item-img-wrap">
+                        </div>
+                        <div class="product__products-item">
+                            <a href="#" class="product__products-item-img-wrap">
                                 <div class="product__overlay">
                                     <i class="far fa-eye"></i>
                                 </div>
                                 <img src="./img/products/5.png" alt="" class="product__products-item-img">
-                            </div>
-                            <div class="product__infor">
                                 <div class="product__products-item-name">
                                     <span class="product__products-item-name-text">Nature's Bounty Biotin</span>
                                 </div>
+                            </a>
+                            <div class="product__infor">
+                                
                                 <div class="product__products-item-brand">
                                     <span class="product__products-item-brand-text">10000 MCG</span>
                                 </div>
@@ -511,18 +518,19 @@
                                     <span class="product__products-item-cost-main-text">$30.00</span>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="product__products-item">
-                            <div class="product__products-item-img-wrap">
+                        </div>
+                        <div class="product__products-item">
+                            <a href="#" class="product__products-item-img-wrap">
                                 <div class="product__overlay">
                                     <i class="far fa-eye"></i>
                                 </div>
                                 <img src="./img/products/6.png" alt="" class="product__products-item-img">
-                            </div>
-                            <div class="product__infor">
                                 <div class="product__products-item-name">
                                     <span class="product__products-item-name-text">Best Colon Detox Formula</span>
                                 </div>
+                            </a>
+                            <div class="product__infor">
+                                
                                 <div class="product__products-item-brand">
                                     <span class="product__products-item-brand-text">Advanced Colon</span>
                                 </div>
@@ -531,18 +539,19 @@
                                     <span class="product__products-item-cost-main-text">$30.00</span>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="product__products-item">
-                            <div class="product__products-item-img-wrap">
+                        </div>
+                        <div class="product__products-item">
+                            <a href="#" class="product__products-item-img-wrap">
                                 <div class="product__overlay">
                                     <i class="far fa-eye"></i>
                                 </div>
                                 <img src="./img/products/7.png" alt="" class="product__products-item-img">
-                            </div>
-                            <div class="product__infor">
                                 <div class="product__products-item-name">
                                     <span class="product__products-item-name-text">Natural Factors Vitamin C</span>
                                 </div>
+                            </a>
+                            <div class="product__infor">
+                                
                                 <div class="product__products-item-brand">
                                     <span class="product__products-item-brand-text">Blueberry Rasp</span>
                                 </div>
@@ -551,18 +560,18 @@
                                     <span class="product__products-item-cost-main-text">$30.00</span>
                                 </div>
                             </div>
-                        </a>
-                        <a href="#" class="product__products-item">
-                            <div class="product__products-item-img-wrap">
+                        </div>
+                        <div class="product__products-item">
+                            <a href="#" class="product__products-item-img-wrap">
                                 <div class="product__overlay">
                                     <i class="far fa-eye"></i>
                                 </div>
                                 <img src="./img/products/8.png" alt="" class="product__products-item-img">
-                            </div>
-                            <div class="product__infor">
                                 <div class="product__products-item-name">
                                     <span class="product__products-item-name-text">Jarrow Formulas</span>
                                 </div>
+                            </a>
+                            <div class="product__infor">
                                 <div class="product__products-item-brand">
                                     <span class="product__products-item-brand-text">Methylcobalamin</span>
                                 </div>
@@ -571,7 +580,7 @@
                                     <span class="product__products-item-cost-main-text">$30.00</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -611,17 +620,6 @@
                         </div>
                         <div class="news__colum-title">
                             <a href="#" class="news__colum-title-text">Hair loss: Scientists test wearable re-growth device</a>
-                        </div>
-                        <div class="news__colum-description">
-                            <span class="news__colum-description-text">14 June 2018 by <span>Admin</span></span>
-                        </div>
-                    </div>
-                    <div class="news__colum">
-                        <div class="news__colum-img">
-                            <img src="./img/news/1.png" alt="" class="news__colum-img-img">
-                        </div>
-                        <div class="news__colum-title">
-                            <a href="#" class="news__colum-title-text">Probiotics may help battle antibiotic resistance Probiotics may help</a>
                         </div>
                         <div class="news__colum-description">
                             <span class="news__colum-description-text">14 June 2018 by <span>Admin</span></span>
@@ -683,13 +681,13 @@
                                 <li class="footer__colum-item">
                                     <a href="" class="footer__colum-item-link">
                                         <span class="footer__colum-item-icon"><i class="fas fa-map-marker-alt"></i>
-                                            <span>Lorem Ipsum has been the industry's standard</span>
+                                            <span>Lorem Ipsum has been the indus-try's standard</span>
                                         </span>
                                     </a>
                                 </li>
                                 <li class="footer__colum-item">
                                     <a href="" class="footer__colum-item-link">
-                                        <span class="footer__colum-item-icon"><i class="fas fa-envelope"></i>
+                                        <span class="footer__colum-item-icon"><img src="./img/email-footer.png" alt=""></i>
                                             <span>contact@medic.com</span>
                                         </span>                                       
                                     </a>
@@ -714,12 +712,12 @@
                                     </li>
                                     <li class="footer__colum-item-icon-social-item">
                                         <a href="" class="footer__colum-item-icon-social-link">
-                                            <i class="fab fa-google-plus-g"></i>
+                                            <span class="ti-google icon-themify"></span>
                                         </a>
                                     </li>
                                     <li class="footer__colum-item-icon-social-item">
                                         <a href="" class="footer__colum-item-icon-social-link">
-                                            <i class="fab fa-instagram"></i>
+                                            <span class="icon icon-instagram"></span>
                                         </a>
                                     </li>
                                 </ul>
