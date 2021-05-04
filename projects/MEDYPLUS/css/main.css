@@ -56,8 +56,8 @@
 
 .header__address-flag {
     display: flex;
-    align-items: center;
 }
+
 
 .header__address-flag-img {
     width: 16px;
@@ -67,6 +67,17 @@
 .header__address-flag-select {
     font-size: 12px;
     color: var(--text-sub-color);
+}
+
+.header__address-flag-select-select {
+    font-size: 12px;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: var(--black-color);
+    border: none;
+    color: var(--white-color);
+    margin-left: 10px;
+    margin-right: 3px;
 }
 
 .header__address-flag-text {
@@ -129,7 +140,6 @@
     top: 50%;
     transform: translateY(-50%);
     right: 436px;
-
 }
 
 .header__search-search-input-search-form::after {
@@ -201,6 +211,7 @@
 
 _::-webkit-full-page-media, _:future, :root .header__search-search-input-icon-img {
     top: 2px;
+    right: -2px;
   }
 
 _::-webkit-full-page-media, _:future, :root .header__search-search-input-search-select {
@@ -580,20 +591,24 @@ _::-webkit-full-page-media, _:future, :root .header__search-search-input-search-
 
 .slider__btn-next:hover:after {
     background-color: var(--primary-color);
+    cursor: pointer;
 }
 
 .slider__btn-next:hover {
     background-color: var(--primary-color);
     color: var(--white-color);
+    cursor: pointer;
 }
 
 .slider__btn-prev:hover:before{
     background-color: var(--primary-color);
+    cursor: pointer;
 }
 
 .slider__btn-prev:hover {
     background-color: var(--primary-color);
     color: var(--white-color);
+    cursor: pointer;
 }
 
 .slider__btn-next {
@@ -1424,3 +1439,13 @@ _::-webkit-full-page-media, _:future, :root .header__search-search-input-search-
 }
 
 
+/*Flag*/
+.icon-select-select {
+    color: var(--white-color);
+    font-size: 10px;
+}
+
+.flag-css {
+    display: flex;
+    align-items: center;
+}

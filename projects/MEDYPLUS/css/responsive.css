@@ -428,6 +428,9 @@
     .hide-mobile {
         display: none;
     }
+    .slider__title-title {
+        line-height: 32px;
+    }
     /*Header*/
     .header__address-address-item {
         width: 100%;
@@ -557,6 +560,9 @@
     }
     .news__subject-sub {
         font-size: 52px;
+    }
+    .slider__title-title {
+        line-height: 32px;
     }
 
     /*Product*/

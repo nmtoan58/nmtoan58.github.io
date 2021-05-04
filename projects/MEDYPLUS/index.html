@@ -65,12 +65,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="header__address-flag hide-tablet hide-pc">
-                        <img src="./img/flag.png" alt="" class="header__address-flag-img">
-                        <div class="header__address-flag-select">
-                            <span class="header__address-flag-text">English</span>
-                            <span class="header__address-flag-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
+                    <div class="header__address-flag hide-tablet hide-pc flag-css">
+                        <img id="img-flag" src="./img/flag.png" alt="" class="header__address-flag-img">
+                        <select id="select-flag" onchange="flagImg()" class ="header__address-flag-select-select" name="" id="">
+                            <option value="default">English</option>
+                            <option value="1">VietNamese</option>
+                        </select>
+                        <span class="icon-select-select">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -414,8 +417,8 @@
                             <span class="product__subject-main-text">TOP SELLING</span>
                         </div>
                         <div class="product__btn-nav">
-                            <span id="btn-prev-product" class="product__btn-nav-icon"><i class="fas fa-chevron-left"></i></span>
-                            <span id="btn-next-product" class="product__btn-nav-icon"><i class="fas fa-chevron-right"></i></span>
+                            <span id="btn-prev-product" class="product__btn-nav-icon"><i class="ti-angle-left"></i></span>
+                            <span id="btn-next-product" class="product__btn-nav-icon"><i class="ti-angle-right"></i></span>
                         </div>
                     </div>
                     <div id="product-list-1" class="product__products product-list-1">
@@ -1039,5 +1042,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="./slick/slick-1.8.1/slick/slick.js"></script>
     <script src="./slick.js"></script>
+    <script src="./flag.js"></script>
 </body>
 </html>
