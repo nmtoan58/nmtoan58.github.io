@@ -75,7 +75,7 @@
     outline: none;
     background-color: var(--black-color);
     border: none;
-    color: var(--white-color);
+    color: var(--text-sub-color);
     margin-left: 10px;
     margin-right: 3px;
 }
