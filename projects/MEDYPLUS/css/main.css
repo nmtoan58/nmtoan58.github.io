@@ -200,8 +200,20 @@
 }
 
 _::-webkit-full-page-media, _:future, :root .header__search-search-input-icon-img {
-    top: -2px;
+    top: 2px;
   }
+
+_::-webkit-full-page-media, _:future, :root .header__search-search-input-search-select {
+    position: absolute;
+    left: 20px;
+    top: 44%;
+    transform: translateY(-50%);
+    color: var(--text-search-color);
+    border: none;
+    outline: none;
+    font-size: 12px;
+    -webkit-appearance:none;
+}
 
 .header__search-search-input-icon-img:hover {
     background-color: var(--black-color);
@@ -236,6 +248,7 @@ _::-webkit-full-page-media, _:future, :root .header__search-search-input-icon-im
 .header__search-search-icon-text {
     margin-left: 20px;
 }
+
 /*Setting*/
 .setting__list {
     position: absolute;
@@ -876,15 +889,15 @@ _::-webkit-full-page-media, _:future, :root .header__search-search-input-icon-im
 
 .product__btn-nav-icon {
     font-size: 32px;
+    color: #cfcfcf;
+}
+
+.product__btn-nav-icon:last-child {
+    margin-left: 34px;
 }
 
 .icon--active {
     color: var(--primary-color);
-    margin-left: 34px;
-}
-
-.icon--none-active {
-    color: #cfcfcf;
 }
 
 /*Product-item*/
@@ -1122,7 +1135,7 @@ _::-webkit-full-page-media, _:future, :root .header__search-search-input-icon-im
 
 .new-letter__input-mail-input {
     width: 100%;
-    padding: 30px 180px 30px 30px;
+    padding: 27px 180px 27px 30px;
     border-radius: 40px;
     border: 1px solid var(--text-sub-color);
 }
@@ -1139,7 +1152,7 @@ _::-webkit-full-page-media, _:future, :root .header__search-search-input-icon-im
 
 .new-letter__input-mail-input-btn {
     position: absolute;
-    right: 10px;
+    right: 6px;
     top: 50%;
     transform: translateY(-50%);
     width: 170px;
@@ -1150,7 +1163,8 @@ _::-webkit-full-page-media, _:future, :root .header__search-search-input-icon-im
     border-radius: 40px;
     font-size: 16px;
     color: var(--white-color);
-    font-weight: 400;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .new-letter__input-mail-input-btn:hover {
@@ -1396,3 +1410,17 @@ _::-webkit-full-page-media, _:future, :root .header__search-search-input-icon-im
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+
+/*Js product*/ 
+.product-list-1 {
+    display: flex;
+    animation: fadein 1s linear;
+}
+
+.product-list-2 {
+    display: none;
+    animation: fadein 1s linear;
+}
+
+

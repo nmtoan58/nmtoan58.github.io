@@ -76,3 +76,24 @@ function countdown() {
 }
 
 setInterval(countdown,1000);
+
+/*Product*/
+
+var productBtnNext = document.getElementById('btn-next-product');
+var productBtnPrev = document.getElementById('btn-prev-product');
+var productList1 = document.getElementById("product-list-1");
+var productList2 = document.getElementById("product-list-2");
+
+productBtnNext.onclick = ()=> {
+    productList1.style.display = 'none';
+    productList2.style.display = 'flex';
+    productBtnNext.classList.add('icon--active');
+    productBtnPrev.classList.remove('icon--active');
+}
+
+productBtnPrev.onclick = ()=> {
+    productList1.style.display = 'flex';
+    productList2.style.display = 'none';
+    productBtnNext.classList.remove('icon--active');
+    productBtnPrev.classList.add('icon--active');
+}
