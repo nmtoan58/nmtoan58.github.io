@@ -112,7 +112,8 @@
         margin: 0 20px;
     }
     .header__address-address {
-        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
     }
     .header__address-address-item {
         width: 31.75%;
@@ -444,6 +445,11 @@
         height: 350px;
     }
     /*Product*/
+
+    .product__products-item {
+        width: 44%;
+        margin: 1% 3%;
+    }
     .product__subject-main-text {
         font-size: 20px;
     }
@@ -455,6 +461,21 @@
     }
     .product__btn-nav-icon:last-child {
         margin-left: 15px;
+    }
+    .news__subject-sub {
+        font-size: 72px;
+    }
+    .product__products-item-name-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 12px;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        margin-top: 5px;
+    }
+    .banner__hot-deal {
+        margin-bottom: 10px;
     }
     /*Footer*/
     
